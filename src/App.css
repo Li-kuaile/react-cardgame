@@ -1,9 +1,11 @@
+/* 设置 .App 元素为网格布局，并将子元素在容器中居中对齐，并设置网格间距为 2rem */
 .App {
   display: grid;
   place-items: center;
   gap: 2rem;
 }
 
+/* 设置 .gameboard 元素为网格布局，定义四列等宽，并设置背景颜色、内边距、边框圆角、边框和阴影效果以及网格间距 */
 .gameboard {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -15,6 +17,7 @@
   gap: 1rem;
 }
 
+/* 设置 .score 元素为弹性布局，使内容在元素内部左右对齐，并将元素宽度设置为100% */
 .score {
   display: flex;
   justify-content: space-between;

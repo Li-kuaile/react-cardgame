@@ -1,41 +1,46 @@
+/* 卡片样式 */
 .card {
   display: grid;
   position: relative;
   place-items: center;
   width: 80px;
   height: 80px;
-  background-color: hsl(var(--bkg));
-  user-select: none;
-  border: 2px solid hsl(var(--accent));
-  box-shadow: 0 0 0 hsl(var(--accent) / 0.2), 0 0 0 -0.3rem hsl(var(--bkg)),
-    0 0 0 -0.6rem hsl(var(--accent));
-  transition: transform 600ms ease;
+  background-color: hsl(var(--bkg)); /* 使用hsl颜色值 */
+  user-select: none; /* 不允许用户选中文本 */
+  border: 2px solid hsl(var(--accent)); /* 2像素实线边框 */
+  box-shadow: 0 0 0 hsl(var(--accent) / 0.2), 0 0 0 -0.3rem hsl(var(--bkg)), 0 0 0 -0.6rem hsl(var(--accent)); /* 设置阴影效果 */
+  transition: transform 600ms ease; /* 变换动画效果 */
 }
 
+/* 禁用状态和匹配状态 */
 [disabled],
 .card.matched {
-  opacity: 0.2;
-  pointer-events: none;
-  cursor: not-allowed;
+  opacity: 0.2; /* 不透明度为0.2 */
+  pointer-events: none; /* 禁止事件传递 */
+  cursor: not-allowed; /* 显示禁止鼠标指针 */
 }
 
+/* 卡片正反面 */
 .side {
-  pointer-events: none;
-  position: absolute;
+  pointer-events: none; /* 禁止事件传递 */
+  position: absolute; /* 绝对定位 */
 }
 
+/* 已匹配、翻转或聚焦时的背面样式 */
 :is(.card.matched, .card.flipped, :focus) .back {
-  transform: rotateY(0deg);
+  transform: rotateY(0deg); /* Y轴旋转为0度 */
 }
 
+/* 已匹配、翻转或聚焦时的正面样式 */
 :is(.card.matched, .card.flipped, :focus) .front {
-  transform: rotateY(90deg);
+  transform: rotateY(90deg); /* Y轴旋转为90度 */
 }
 
 .back {
-  transform: rotateY(90deg);
-  font-size: 3rem;
+  transform: rotateY(90deg); /* Y轴旋转为90度 */
+  font-size: 3rem; /* 字体大小为3倍根元素的大小 */
 }
+
 .flip {
-  transform: rotateY(360deg);
+  transform: rotateY(360deg); /* Y轴旋转为360度 */
 }

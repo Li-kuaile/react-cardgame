@@ -1,9 +1,11 @@
+/* 通配符选择器，将所有元素的边距和填充设置为0，并将CSS框模型的盒子模型设置为border-box */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* 定义全局的CSS自定义属性（CSS变量），包括 --hue（色调）、--accent（强调色）、--bkg（背景颜色）和 --txt（文本颜色） */
 :root {
   --hue: 220;
   --accent: var(--hue) 50% 50%;
@@ -11,6 +13,7 @@
   --txt: var(--hue) 70% 12%;
 }
 
+/* 对 body 元素应用了一些样式，设置了网页的整体布局、字体大小、背景颜色、填充和文本颜色 */
 body {
   display: grid;
   place-items: center;
@@ -21,11 +24,13 @@ body {
   color: hsl(var(--txt));
 }
 
+/* 设置图片元素为块级元素，并且最大宽度为100% */
 img {
   display: block;
   max-width: 100%;
 }
 
+/* 对按钮元素定义了一系列样式，包括字体、背景、边框等 */
 button {
   font: inherit;
   font-weight: bold;
@@ -39,10 +44,12 @@ button {
   transition: box-shadow 200ms ease-in-out;
 }
 
+/* 按钮获取焦点时去掉默认的轮廓样式 */
 button:focus {
   outline: none;
 }
 
+/* 定义按钮在鼠标悬停和获取焦点时的阴影效果 */
 button:is(:hover, :focus-visible) {
   box-shadow: 0 0 0 hsl(var(--accent) / 0.2), 0 0 0 0.3rem hsl(var(--bkg)),
     0 0 0 0.6rem hsl(var(--accent));
