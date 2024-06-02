@@ -1,8 +1,3 @@
-# React + Vite
+# 🕹️卡片匹配游戏 React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+简单的卡片匹配游戏的逻辑和界面渲染，包括卡片的随机排列、点击事件处理、匹配逻辑判断和界面更新等功能。
