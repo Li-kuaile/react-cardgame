@@ -1,4 +1,4 @@
-import head from '../assets/react.svg';
+import head from './react.svg';
 import './Card.css';
 import { useState } from 'react';
 
